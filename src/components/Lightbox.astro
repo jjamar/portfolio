@@ -1,0 +1,231 @@
+---
+// Lightbox das telas de produto (.telas img) dentro dos cases.
+// Zero dependências: usa <dialog> nativo, que já entrega Esc, backdrop e foco preso.
+// Progressive enhancement: sem JS, as imagens continuam visíveis e legíveis.
+---
+
+<dialog class="lb" aria-label="Visualização da tela em tamanho maior">
+  <button class="lb-fechar" type="button" aria-label="Fechar">&times;</button>
+  <button class="lb-nav lb-ant" type="button" aria-label="Tela anterior">&lsaquo;</button>
+  <button class="lb-nav lb-prox" type="button" aria-label="Próxima tela">&rsaquo;</button>
+
+  <figure class="lb-fig">
+    <img class="lb-img" src="" alt="" />
+    <figcaption>
+      <span class="lb-legenda"></span>
+      <span class="lb-contador" aria-hidden="true"></span>
+    </figcaption>
+  </figure>
+</dialog>
+
+<style is:global>
+  /* Alvo clicável: só vira botão quando o JS assume */
+  .telas figure.lb-ativo img {
+    cursor: zoom-in;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+  .telas figure.lb-ativo img:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+  }
+  .telas figure.lb-ativo img:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 3px;
+  }
+
+  .lb {
+    border: none;
+    padding: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+  }
+  .lb::backdrop {
+    background: rgba(13, 27, 42, 0.94);
+  }
+  .lb[open] {
+    display: grid;
+    place-items: center;
+  }
+
+  .lb-fig {
+    margin: 0;
+    padding: 56px 64px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+  }
+  .lb-img {
+    max-width: min(1280px, 92vw);
+    max-height: 76vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--cream-2);
+  }
+  .lb-fig figcaption {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 14px;
+    max-width: min(760px, 88vw);
+    text-align: center;
+    color: #d7dee7;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .lb-contador {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    color: #8b98a8;
+    white-space: nowrap;
+  }
+
+  .lb-fechar,
+  .lb-nav {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #f5f0e8;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    transition: background 0.16s ease, border-color 0.16s ease;
+  }
+  .lb-fechar:hover,
+  .lb-nav:hover {
+    background: var(--red);
+    border-color: var(--red);
+  }
+  .lb-fechar:focus-visible,
+  .lb-nav:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 3px;
+  }
+  .lb-fechar {
+    top: 20px;
+    right: 22px;
+    width: 42px;
+    height: 42px;
+    font-size: 26px;
+  }
+  .lb-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+    padding-bottom: 4px;
+  }
+  .lb-ant { left: 18px; }
+  .lb-prox { right: 18px; }
+  .lb-nav[hidden] { display: none; }
+
+  @media (max-width: 700px) {
+    .lb-fig { padding: 52px 12px 20px; }
+    .lb-img { max-height: 68vh; }
+    .lb-nav { top: auto; bottom: 18px; transform: none; }
+    .lb-ant { left: 24px; }
+    .lb-prox { right: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .telas figure.lb-ativo img,
+    .lb-fechar,
+    .lb-nav { transition: none; }
+    .telas figure.lb-ativo img:hover { transform: none; }
+  }
+</style>
+
+<script>
+  const dlg = document.querySelector('.lb') as HTMLDialogElement | null;
+  const figuras = Array.from(document.querySelectorAll<HTMLElement>('.telas figure'));
+
+  // Sem <dialog> nativo ou sem telas na página: não faz nada e as imagens seguem normais.
+  if (dlg && typeof dlg.showModal === 'function' && figuras.length) {
+    const img = dlg.querySelector('.lb-img') as HTMLImageElement;
+    const legenda = dlg.querySelector('.lb-legenda') as HTMLElement;
+    const contador = dlg.querySelector('.lb-contador') as HTMLElement;
+    const btnAnt = dlg.querySelector('.lb-ant') as HTMLButtonElement;
+    const btnProx = dlg.querySelector('.lb-prox') as HTMLButtonElement;
+    const btnFechar = dlg.querySelector('.lb-fechar') as HTMLButtonElement;
+
+    const telas = figuras
+      .map((fig) => {
+        const i = fig.querySelector('img');
+        const cap = fig.querySelector('figcaption');
+        return i ? { src: i.currentSrc || i.src, alt: i.alt, texto: cap?.textContent?.trim() ?? '' } : null;
+      })
+      .filter((t): t is { src: string; alt: string; texto: string } => t !== null);
+
+    const varias = telas.length > 1;
+    btnAnt.hidden = !varias;
+    btnProx.hidden = !varias;
+
+    let atual = 0;
+    let origem: HTMLElement | null = null;
+
+    function mostrar(i: number) {
+      atual = (i + telas.length) % telas.length;
+      const t = telas[atual];
+      img.src = t.src;
+      img.alt = t.alt;
+      legenda.textContent = t.texto;
+      contador.textContent = varias ? `${atual + 1} / ${telas.length}` : '';
+    }
+
+    function abrir(i: number, disparo: HTMLElement) {
+      origem = disparo;
+      mostrar(i);
+      dlg.showModal();
+    }
+
+    figuras.forEach((fig, i) => {
+      const alvo = fig.querySelector('img');
+      if (!alvo) return;
+      fig.classList.add('lb-ativo');
+      // A imagem vira alvo de teclado sem virar botão no HTML servido.
+      alvo.setAttribute('role', 'button');
+      alvo.setAttribute('tabindex', '0');
+      alvo.setAttribute('aria-haspopup', 'dialog');
+      alvo.addEventListener('click', () => abrir(i, alvo));
+      alvo.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          abrir(i, alvo);
+        }
+      });
+    });
+
+    btnAnt.addEventListener('click', () => mostrar(atual - 1));
+    btnProx.addEventListener('click', () => mostrar(atual + 1));
+    btnFechar.addEventListener('click', () => dlg.close());
+
+    // Clique no fundo (fora da figura) fecha. Esc é nativo do <dialog>.
+    dlg.addEventListener('click', (e) => {
+      if (!(e.target as HTMLElement).closest('.lb-fig, .lb-nav, .lb-fechar')) dlg.close();
+    });
+
+    dlg.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (!varias) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); mostrar(atual + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); mostrar(atual - 1); }
+    });
+
+    // Devolve o foco para a imagem de onde saiu: exigência básica de teclado.
+    dlg.addEventListener('close', () => {
+      origem?.focus();
+      origem = null;
+    });
+  }
+</script>

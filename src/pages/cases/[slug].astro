@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Lightbox from '../../components/Lightbox.astro';
 
 export async function getStaticPaths() {
   const cases = await getCollection('cases');
@@ -43,6 +44,8 @@ const d = entry.data;
     <div class="prose">
       <Content />
     </div>
+
+    <Lightbox />
 
     <nav class="proximo" aria-label="Próximo case">
       <p class="eyebrow">Próximo case</p>
