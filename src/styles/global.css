@@ -165,7 +165,11 @@ h1, h2, h3 {
 @media (max-width: 860px) { .grid-3 { grid-template-columns: 1fr; } }
 
 /* Seções */
-.section { padding: 72px 0 0; }
+/* padding-top, nunca shorthand: .section vem depois de .wrap no arquivo e,
+   com a mesma especificidade, um shorthand aqui zeraria o padding lateral
+   de toda seção "section wrap" (no desktop passa despercebido; no mobile o
+   texto encosta na borda da tela). */
+.section { padding-top: 72px; }
 .section-title { font-size: clamp(1.4rem, 2.6vw, 1.75rem); margin-bottom: 28px; }
 
 /* Prosa dos cases */
@@ -203,6 +207,17 @@ h1, h2, h3 {
 }
 .prose td { padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--ink-2); vertical-align: top; }
 .prose hr { border: none; border-top: 1px solid var(--line); margin: 2.4em 0; }
+/* Tabelas de trade-off têm 3 colunas de texto: em tela estreita rolam
+   horizontalmente em vez de espremer a coluna ou estourar a página. */
+@media (max-width: 700px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+  }
+  .prose th, .prose td { padding: 9px 10px; min-width: 128px; }
+}
 .prose a { color: var(--red); text-decoration-color: var(--red); }
 .prose a:hover { color: var(--red-dark); }
 
