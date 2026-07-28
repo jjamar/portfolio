@@ -18,5 +18,8 @@ Thumbs.db
 # artefatos locais
 *.zip
 
-# documento interno de trabalho (nao publicar)
+# documentos internos de trabalho (nao publicar)
 HANDOFF_PORTFOLIO.md
+publicacao.html
+
+PUBLICACAO.md
