@@ -206,6 +206,44 @@ h1, h2, h3 {
 .prose a { color: var(--red); text-decoration-color: var(--red); }
 .prose a:hover { color: var(--red-dark); }
 
+/* Galeria de telas de produto dentro dos cases */
+.telas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+  margin: 2em 0 1.2em;
+}
+.telas figure {
+  margin: 0;
+  min-width: 0;
+}
+/* a primeira tela ocupa a largura toda: e a que carrega a decisao de produto */
+.telas figure:first-child {
+  grid-column: 1 / -1;
+}
+.telas img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream-2);
+}
+.telas figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.nota-telas {
+  font-size: 0.85rem;
+  color: var(--sand);
+  margin: 0 0 1.6em;
+}
+@media (max-width: 700px) {
+  .telas { grid-template-columns: 1fr; gap: 24px; }
+}
+
 /* Placeholder explícito de asset */
 .placeholder {
   border: 2px dashed var(--line-2);

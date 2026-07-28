@@ -50,7 +50,7 @@ O corte do MVP foi a decisão de produto mais importante:
 
 | Entrou | Ficou de fora | Por quê |
 |---|---|---|
-| Descoberta por estado, cidade, bairro e dia da semana | Geolocalização e mapa | Filtros resolvem o job principal com muito menos complexidade |
+| Descoberta por estado, cidade, bairro e dia da semana, com ordenação por proximidade | Mapa interativo | Distância calculada resolve "qual feira é perto de mim" sem o custo de renderizar, carregar e manter um mapa |
 | Catálogo de bancas por feira | Pagamento on-line | Pagamento na retirada elimina PCI, split e disputas |
 | Reserva para retirada no dia | Entrega e logística | Entrega transformaria o produto em delivery, outro negócio |
 | Dois perfis (consumidor e feirante) | Avaliações e social | Sem massa crítica, avaliação é ruído |
@@ -71,7 +71,30 @@ Reserva para retirada é a aposta que define o produto: preserva o ritual da fei
 
 O que a IA não fez: definir o problema, cortar o escopo, escolher reserva em vez de delivery, desenhar o modelo de dados, decidir que autorização viveria no banco via RLS. IA multiplicou minha velocidade de execução; a direção foi humana em todas as decisões que importam.
 
-<div class="placeholder">Screenshots da visão do cliente (home, listagem de feiras, página de banca, fluxo de reserva) entram aqui. Aguardando os arquivos.</div>
+## O produto
+
+A jornada completa do consumidor, do MVP em produção.
+
+<div class="telas">
+  <figure>
+    <img src="/fotos/feira-viva/01-descoberta.webp" alt="Tela de descoberta do Feira Viva: lista de feiras em cards, com filtros de estado, cidade, bairro e dia, e ordenação por proximidade" width="1200" height="864" loading="lazy" decoding="async" />
+    <figcaption>Descoberta. Filtros por localização e dia, com ordenação opcional por proximidade. A distância aparece em cada card; o mapa ficou de fora de propósito.</figcaption>
+  </figure>
+  <figure>
+    <img src="/fotos/feira-viva/02-feira.webp" alt="Página de uma feira no Feira Viva, com endereço, dia e horário, e as bancas cadastradas" width="1200" height="534" loading="lazy" decoding="async" />
+    <figcaption>Página da feira. Endereço, dia e horário no topo; abaixo, as bancas daquela feira. É a página pensada para ser indexável por busca, o que motivou o SSR.</figcaption>
+  </figure>
+  <figure>
+    <img src="/fotos/feira-viva/03-reserva.webp" alt="Catálogo de uma banca com produtos e preços por quilo, e o painel lateral de reserva com total, data de retirada e observação" width="1200" height="720" loading="lazy" decoding="async" />
+    <figcaption>Catálogo e reserva. Quantidade por item, total calculado e data de retirada. Sem pagamento on-line: o dinheiro continua acontecendo na banca.</figcaption>
+  </figure>
+  <figure>
+    <img src="/fotos/feira-viva/04-minhas-reservas.webp" alt="Lista de reservas do consumidor com status pendente e cancelada, feira, data de retirada, itens e valor" width="1200" height="784" loading="lazy" decoding="async" />
+    <figcaption>Minhas reservas. Estado explícito (pendente, cancelada) e cancelamento pelo consumidor. Cada usuário só enxerga as próprias reservas, regra garantida por RLS no banco.</figcaption>
+  </figure>
+</div>
+
+<p class="nota-telas">Telas da visão do consumidor. A visão do feirante (gestão de banca, catálogo e pedidos recebidos) existe no produto e não está retratada aqui.</p>
 
 ## Resultados e estágio atual
 
