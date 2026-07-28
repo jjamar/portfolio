@@ -1,0 +1,62 @@
+---
+const ano = new Date().getFullYear();
+---
+
+<footer id="contato" class="site-footer">
+  <div class="wrap top">
+    <div>
+      <p class="chamada">Vamos conversar?</p>
+      <p class="sub">
+        Aberto a conversas sobre posições de liderança de produto e desafios de produto + IA.
+        Rio de Janeiro, com disponibilidade imediata para São Paulo. Remoto ou híbrido.
+      </p>
+    </div>
+    <a class="btn btn-red" href="mailto:jjamarmartins@gmail.com">jjamarmartins@gmail.com</a>
+  </div>
+  <div class="wrap bottom">
+    <p>© {ano} Jonatan Jamar</p>
+    <nav aria-label="Redes">
+      <a href="https://linkedin.com/in/jonatanjamar" rel="me noopener" target="_blank">LinkedIn</a>
+      <a href="https://github.com/jjamar" rel="me noopener" target="_blank">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 88px;
+    background: var(--navy);
+    color: var(--cream);
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding-top: 48px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .chamada {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .sub { margin: 0; max-width: 520px; font-size: 0.95rem; color: #b9c2d0; }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 22px;
+    border-top: 1px solid #24344a;
+    font-size: 0.85rem;
+    color: #8b97a8;
+  }
+  .bottom p { margin: 0; }
+  .bottom nav { display: flex; gap: 18px; }
+  .bottom a { color: var(--cream); text-decoration-color: #4a5a72; }
+  .bottom a:hover { color: #fff; text-decoration-color: var(--red); }
+</style>

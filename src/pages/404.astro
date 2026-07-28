@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Página não encontrada · Jonatan Jamar"
+  description="A página que você procura não existe."
+>
+  <section class="wrap nf">
+    <p class="eyebrow eyebrow-red">404</p>
+    <h1>Essa página não passou no discovery.</h1>
+    <p class="nf-texto">
+      O endereço não existe ou mudou de lugar. O melhor caminho a partir daqui:
+    </p>
+    <div class="nf-ctas">
+      <a class="btn btn-primary" href="/">Ir para a home</a>
+      <a class="btn btn-ghost" href="/cases">Ver os cases</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { padding-top: 96px; min-height: 40vh; }
+  .nf h1 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); margin: 14px 0 16px; }
+  .nf-texto { color: var(--ink-2); margin: 0 0 28px; }
+  .nf-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+</style>

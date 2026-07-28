@@ -1,0 +1,71 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+  return cases.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<Base title={d.seoTitle} description={d.seoDescription}>
+  <article class="wrap caso">
+    <header>
+      <p class="eyebrow eyebrow-red">{d.tag}</p>
+      <h1>{d.title}</h1>
+
+      <div class="resumo-box">
+        <p><strong>Resumo executivo.</strong> {d.resumo}</p>
+      </div>
+
+      <dl class="meta-strip">
+        {d.meta.map((m) => (
+          <div>
+            <dt>{m.label}</dt>
+            <dd>{m.valor}</dd>
+          </div>
+        ))}
+      </dl>
+
+      {d.linkVivo && (
+        <p class="link-vivo">
+          <a class="btn btn-ghost" href={d.linkVivo} target="_blank" rel="noopener">
+            Ver o produto no ar ↗
+          </a>
+        </p>
+      )}
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <nav class="proximo" aria-label="Próximo case">
+      <p class="eyebrow">Próximo case</p>
+      <a href={`/cases/${d.proximoSlug}`}>{d.proximoTitulo} →</a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .caso { padding-top: 64px; max-width: 820px; }
+  .caso h1 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); margin: 14px 0 8px; }
+  .link-vivo { margin: 24px 0 0; }
+  .proximo {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .proximo a {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: var(--navy);
+  }
+  .proximo a:hover { color: var(--red); }
+</style>

@@ -1,0 +1,240 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import CaseCard from '../components/CaseCard.tsx';
+
+const todos = await getCollection('cases');
+const cases = todos
+  .sort((a, b) => a.data.ordem - b.data.ordem)
+  .map((c) => ({
+    slug: c.id,
+    title: c.data.title,
+    tag: c.data.tag,
+    natureza: c.data.natureza,
+    resumoCard: c.data.resumo,
+    destaques: c.data.destaques,
+  }));
+
+const metricas = [
+  { num: '2M+', label: 'usuários ativos mensais no ecossistema digital que liderei' },
+  { num: '+36%', label: 'usuários ativos mensais no App Saúde (1,1M → 1,5M)' },
+  { num: '16 → 47', label: 'NPS do Portal dos Corretores, B2B com 40 mil corretores' },
+  { num: 'R$ 790 mil', label: 'de economia por ano com o redesenho da jornada de boleto' },
+];
+
+const dimensoes = [
+  {
+    titulo: 'Estratégia e liderança',
+    texto:
+      'Construí uma área de produtos digitais do zero: time, governança, priorização de portfólio e reporte a Diretoria e Vice-Presidência. Liderei diretamente 9 PMs e POs e indiretamente cerca de 40 profissionais, com avaliação de liderança de 3,9/4,0 e duas promoções no time.',
+  },
+  {
+    titulo: 'Discovery e entrega',
+    texto:
+      'Discovery com usuários reais, entrevistas, teste de usabilidade, testes A/B em produção, pilotos, rollout progressivo e negociação de cadência de releases. Decisões tomadas com dados e trade-offs explícitos, em ambiente regulado por ANS e LGPD.',
+  },
+  {
+    titulo: 'Construção',
+    texto:
+      'Plataforma web concebida e implementada ponta a ponta (React com SSR, Supabase com Row Level Security, deploy contínuo) e automação com IA em operação, com guardrails, auditoria e revisão humana. IA como ferramenta de construção, não como discurso.',
+  },
+];
+
+const destaquesMenores = [
+  {
+    titulo: 'Jornada 2ª via de boleto',
+    texto:
+      'Redesenho e lançamento por ondas até 100% da base no App Saúde. Redução de 70% dos chamados e economia estimada de R$ 790 mil por ano na primeira fase de lançamento.',
+  },
+  {
+    titulo: 'Psicologia on-line (integração Conexa Saúde)',
+    texto:
+      'Responsável pela integração via API REST da plataforma da Conexa ao App Saúde, articulando produto, tecnologia e fornecedor. 155 mil atendimentos com CSAT 4,95.',
+  },
+  {
+    titulo: 'Plataforma de Chamados B2B',
+    texto:
+      'Digitalização integral da jornada de atendimento de dúvidas e orientações a corretores. 100% de digitalização e CSAT 4,93 em mais de 3 mil tickets mensais.',
+  },
+  {
+    titulo: 'IDbra: identidade digital em blockchain',
+    texto:
+      'Projeto vencedor do Ideathon Bradesco 2024, com business case sobre aproximadamente R$ 50 milhões em risco de fraude.',
+    links: [
+      {
+        rotulo: 'Exame',
+        href: 'https://exame.com/future-of-money/bradesco-inicia-testes-de-identidade-digital-em-blockchain/',
+      },
+      {
+        rotulo: 'Valor Econômico',
+        href: 'https://valor.globo.com/financas/criptomoedas/noticia/2024/12/10/bradesco-preve-implementar-identidade-digital-em-blockchain-em-2025.ghtml',
+      },
+    ],
+  },
+];
+
+const principios = [
+  ['Resultado acima de entrega.', 'O valor gerado é medido pelo problema resolvido e por métricas de sucesso, não pelo volume de entregas.'],
+  ['Construir antes de especificar.', 'Protótipo, automação e validação manual vêm antes de desenvolvimento completo.'],
+  ['Dados acima de opiniões.', 'Quando não existem dados disponíveis, transformo premissas em hipóteses explícitas, mensuráveis e testáveis.'],
+  ['Simplicidade radical.', 'Reduzir complexidade sem perder precisão.'],
+  ['Regulação como contexto, não como desculpa.', 'Risco, compliance e privacidade são restrições de projeto, não justificativa para lentidão.'],
+  ['Liderança que desenvolve.', 'Feedback contínuo, autonomia progressiva e responsabilidade por resultado.'],
+];
+---
+
+<Base
+  title="Jonatan Jamar · Product Leader e Builder"
+  description="Ex-Group Product Manager da Bradesco Saúde. Construí do zero uma área de produtos digitais com 7 canais e 2M+ de usuários. Hoje também construo: produto no ar e automações com IA em operação."
+>
+  <section class="hero wrap">
+    <p class="eyebrow">Senior Digital Product Leader · PM Builder</p>
+    <h1>
+      Liderança de produto em escala de milhões. Capacidade de construção
+      <span class="hl">provada em produção.</span>
+    </h1>
+    <p class="hero-sub">
+      Ex-Group Product Manager da Bradesco Saúde. Construí do zero a área de produtos digitais em
+      um ecossistema regulado com 7 canais e mais de 2 milhões de usuários, com liderança direta
+      de 9 PMs e POs. Hoje também construo com as próprias mãos: produto publicado, agentes e
+      automações com IA em operação e decisões de produto que continuam humanas.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="/cases">Ver cases</a>
+      <a class="btn btn-ghost" href="mailto:jjamarmartins@gmail.com">Falar comigo</a>
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="Números de escala">
+    <div class="ruler">
+      {metricas.map((m) => (
+        <div>
+          <p class="metric-num">{m.num}</p>
+          <p class="metric-label">{m.label}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="section-title">Três formas de gerar valor</h2>
+    <div class="grid-3">
+      {dimensoes.map((d) => (
+        <div>
+          <h3 class="dim-titulo">{d.titulo}</h3>
+          <p class="dim-texto">{d.texto}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="section-title">Cases selecionados</h2>
+    <div class="grid-2">
+      {cases.map((c) => (
+        <CaseCard c={c} />
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="section-title">Resultados em destaque</h2>
+    <div class="grid-2">
+      {destaquesMenores.map((d) => (
+        <div class="mini">
+          <h3 class="mini-titulo">{d.titulo}</h3>
+          <p class="mini-texto">
+            {d.texto}
+            {d.links && (
+              <>
+                <br />Na imprensa:{' '}
+                {d.links.map((l, i) => (
+                  <>
+                    <a href={l.href} target="_blank" rel="noopener">{l.rotulo}</a>{i < d.links.length - 1 ? ' · ' : ''}
+                  </>
+                ))}.
+              </>
+            )}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="sobre-mini">
+      <img
+        src="/fotos/jonatan.jpg"
+        alt="Retrato de Jonatan Jamar sorrindo, com crachá do ProductCamp"
+        width="220"
+        height="220"
+        loading="lazy"
+      />
+      <div>
+        <h2 class="section-title" style="margin-bottom: 14px;">Quem decide e constrói</h2>
+        <p class="sobre-texto">
+          Há mais de 10 anos, atuo na interseção entre tecnologia, projetos e produtos digitais.
+          Comecei na operação de help desk, avancei para projetos de alta criticidade no setor de
+          seguros e cheguei à liderança de produtos digitais na maior operadora de saúde
+          suplementar do país em faturamento.
+        </p>
+        <p class="sobre-texto">
+          Hoje, aprofundo minha atuação em IA aplicada a produtos e transformo decisões em
+          soluções funcionais. Porque liderar produtos, para mim, não é apenas definir o que deve
+          ser construído, e sim, saber como tirar uma ideia do papel.
+        </p>
+        <a href="/sobre" class="link-red">Minha trajetória →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="section-title">Princípios de trabalho</h2>
+    <ol class="principios">
+      {principios.map(([t, d]) => (
+        <li>
+          <strong>{t}</strong> {d}
+        </li>
+      ))}
+    </ol>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: 76px 24px 56px; max-width: calc(var(--wrap)); }
+  .hero h1 {
+    font-size: clamp(1.9rem, 4.6vw, 3rem);
+    max-width: 800px;
+    margin: 16px 0 22px;
+  }
+  .hl { color: var(--red); }
+  .hero-sub { max-width: 640px; font-size: 1.08rem; color: var(--ink-2); margin: 0 0 30px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .dim-titulo { font-size: 1.08rem; margin-bottom: 10px; }
+  .dim-texto { margin: 0; font-size: 0.95rem; color: var(--ink-3); }
+
+  .mini { border-top: 2px solid var(--navy); padding-top: 14px; }
+  .mini-titulo { font-size: 1rem; margin-bottom: 8px; }
+  .mini-texto { margin: 0; font-size: 0.92rem; color: var(--ink-3); }
+  .mini-texto a { color: var(--red); }
+
+  .sobre-mini { display: flex; gap: 36px; align-items: center; }
+  .sobre-mini img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+  .sobre-texto { max-width: 620px; color: var(--ink-2); margin: 0 0 14px; }
+  .link-red { color: var(--red); font-weight: 500; text-decoration-color: var(--red); }
+  @media (max-width: 720px) {
+    .sobre-mini { flex-direction: column; align-items: flex-start; }
+  }
+
+  .principios { margin: 0; padding-left: 1.3em; max-width: 720px; }
+  .principios li { margin-bottom: 12px; color: var(--ink-3); font-size: 0.98rem; }
+  .principios strong { color: var(--navy); font-weight: 500; font-family: var(--font-display); font-size: 0.95rem; }
+</style>

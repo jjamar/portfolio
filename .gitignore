@@ -1,0 +1,22 @@
+# dependências
+node_modules/
+
+# build
+dist/
+.astro/
+.vercel/
+
+# ambiente
+.env
+.env.production
+.env.local
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# artefatos locais
+*.zip
+
+# documento interno de trabalho (nao publicar)
+HANDOFF_PORTFOLIO.md

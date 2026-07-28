@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+
+const timeline = [
+  {
+    periodo: '2025 – presente',
+    titulo: 'Imersão em IA aplicada a produto · independente',
+    texto:
+      'Formação AI Product Leaders (TERA, conclusão ago/2026). Feira Viva em produção; automação de triagem jurídica em operação; outras automações com LLM (análise de feedback, forecast de FP&A, inteligência de mercado).',
+  },
+  {
+    periodo: '2023 – 2025',
+    titulo: 'Group Product Manager · Bradesco Saúde',
+    texto:
+      'Construção da área de produtos digitais do zero. 7 canais, 2M+ usuários, 9 PMs e POs diretos, ~40 profissionais indiretos. MAU do App Saúde de 1,1M a 1,5M (+36%), 86% de engajamento. Vencedor do Ideathon Bradesco 2024 (IDbra, identidade digital em blockchain).',
+  },
+  {
+    periodo: '2022 – 2023',
+    titulo: 'Product Manager (Trainee Expert) · Bradesco Saúde',
+    texto:
+      'Modernização do Portal dos Corretores (B2B, 40 mil corretores). NPS 16 → 47, 58% de novos acessos. Promovido a GPM ao fim do programa.',
+  },
+  {
+    periodo: '2016 – 2022',
+    titulo: 'Gerente de Projetos / Analista de Sistemas · SulAmérica',
+    texto:
+      'Projeto Alice: migração de R$ 3,18 bi e 1,6 mi de apólices para a Allianz. TaxRules: motor de regras tributárias, 6+ unidades de negócio, base tributável acima de R$ 1 bi. Dashboards executivos de fechamento mensal para Diretoria e VP.',
+  },
+  {
+    periodo: '2011 – 2013',
+    titulo: 'Supervisor de Help Desk · DBTrans',
+    texto:
+      'Liderança de 11 analistas em operação regulada pela ANTT. Construção de URA de consulta de saldo por voz: redução de 50% no tempo de atendimento em dois meses.',
+  },
+];
+
+const formacao = [
+  'MBA em Gestão de Projetos · USP · 2023',
+  'Análise e Desenvolvimento de Sistemas · Centro Universitário Carioca · 2017',
+  'AI Product Leaders · TERA · 2026 (conclusão prevista: agosto)',
+  'Certified Scrum Master · Scrum Alliance · 2022',
+  'Product Management · PM3 · 2023',
+];
+---
+
+<Base
+  title="Sobre · Jonatan Jamar"
+  description="Mais de 10 anos entre tecnologia, projetos e produto digital. De help desk à liderança de produto em escala de milhões, e à construção hands-on com IA."
+>
+  <section class="wrap topo">
+    <div class="cabecalho">
+      <div>
+        <p class="eyebrow">Sobre</p>
+        <h1>Da operação à liderança. Da liderança à construção.</h1>
+      </div>
+      <img
+        src="/fotos/jonatan.jpg"
+        alt="Retrato de Jonatan Jamar sorrindo, com crachá do ProductCamp"
+        width="180"
+        height="180"
+      />
+    </div>
+
+    <div class="prose historia">
+      <p>
+        Meu primeiro contato com produto não aconteceu numa aula de discovery. Aconteceu num help
+        desk regulado pela ANTT, onde liderava onze analistas e o telefone não parava. A resposta
+        foi construir do zero uma URA de consulta de saldo por voz, que cortou o tempo de
+        atendimento pela metade em dois meses. Eu ainda não usava a palavra, mas era produto: um
+        problema de usuário, uma solução construída, um resultado medido.
+      </p>
+      <p>
+        Na SulAmérica, passei seis anos entre sistemas, projetos estratégicos e transformação, no
+        lado mais duro da complexidade: a migração de um portfólio de seguros auto de R$ 3,18
+        bilhões e 1,6 milhão de apólices para a Allianz, integrando PeopleSoft, TOTVS e mainframe;
+        um motor de regras tributárias cobrindo mais de seis unidades de negócio e uma base
+        tributável acima de R$ 1 bilhão. Aprendi ali o que sistemas legados, regulação e dinheiro
+        grande fazem com a margem de erro de uma decisão.
+      </p>
+      <p>
+        Na Bradesco Saúde, entrei pelo programa de trainee como Product Manager e assumi a
+        modernização do Portal dos Corretores, um produto B2B com 40 mil usuários. O NPS foi de 16
+        a 47, e o trabalho me levou à promoção a Group Product Manager. Como GPM, construí do zero
+        a área de produtos digitais: 9 PMs e POs liderados diretamente, cerca de 40 profissionais
+        indiretamente, 7 canais digitais e mais de 2 milhões de usuários, reportando a Diretores e
+        Vice-Presidência.
+      </p>
+      <p>
+        Em 2025, encerrei o ciclo Bradesco e escolhi fazer uma imersão deliberada em IA aplicada a
+        produto: formação AI Product Leaders (TERA) e construção hands-on. Dessa fase saíram o
+        <a href="/cases/feira-viva">Feira Viva</a>, plataforma web que concebi e implementei ponta
+        a ponta, e uma <a href="/cases/triagem-juridica">automação de triagem jurídica</a> com
+        LLM, guardrails e revisão humana, em operação. Não foi pausa: foi fechar o ciclo entre
+        decidir e construir.
+      </p>
+
+      <h2>Como eu trabalho</h2>
+      <p>
+        Passei anos vendo iniciativas serem celebradas pela entrega e esquecidas pelo resultado.
+        Por isso meço tudo pelo impacto: métrica definida antes, acompanhada depois. Prefiro
+        construir a especular: protótipo, automação ou validação manual antes de mobilizar
+        desenvolvimento completo. E trato regulação como restrição de projeto, não como desculpa:
+        ANS, LGPD e compliance entram no início do discovery, não no final da fila.
+      </p>
+      <p>
+        Sobre liderança: as duas promoções no meu time me orgulham mais do que qualquer entrega.
+        Gente boa com contexto, feedback específico e autonomia progressiva resolve problemas que
+        roadmap nenhum prevê.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="section-title">Linha do tempo</h2>
+    <ol class="timeline">
+      {timeline.map((t) => (
+        <li>
+          <span class="periodo">{t.periodo}</span>
+          <h3>{t.titulo}</h3>
+          <p>{t.texto}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="section-title">Formação e certificações</h2>
+    <ul class="formacao">
+      {formacao.map((f) => <li>{f}</li>)}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .topo { padding-top: 64px; }
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 28px;
+    margin-bottom: 36px;
+  }
+  .cabecalho h1 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); margin-top: 14px; max-width: 560px; }
+  .cabecalho img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 720px) {
+    .cabecalho { flex-direction: column-reverse; align-items: flex-start; }
+  }
+  .historia h2 { font-size: 1.35rem; margin: 2.2em 0 0.7em; }
+  .formacao { margin: 0; padding-left: 1.2em; max-width: 720px; }
+  .formacao li { margin-bottom: 8px; color: var(--ink-2); }
+</style>

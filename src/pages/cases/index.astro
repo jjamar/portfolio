@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CaseFilter from '../../components/CaseFilter.tsx';
+
+const todos = await getCollection('cases');
+const cases = todos
+  .sort((a, b) => a.data.ordem - b.data.ordem)
+  .map((c) => ({
+    slug: c.id,
+    title: c.data.title,
+    tag: c.data.tag,
+    natureza: c.data.natureza,
+    resumoCard: c.data.resumo,
+    destaques: c.data.destaques,
+    encontrar: c.data.encontrar,
+  }));
+---
+
+<Base
+  title="Cases · Jonatan Jamar"
+  description="Cases de liderança de produto, discovery e experimentação em escala enterprise, e construção hands-on com IA."
+>
+  <section class="wrap topo">
+    <p class="eyebrow">Cases</p>
+    <h1>Como eu penso, decido e construo</h1>
+    <p class="intro">
+      Quatro cases, três formas de gerar valor: liderar em escala, decidir com dados e construir
+      com as próprias mãos. Cada um abre com um resumo executivo de 30 segundos; os detalhes vêm
+      depois.
+    </p>
+  </section>
+
+  <section class="wrap">
+    <CaseFilter cases={cases} client:visible />
+  </section>
+
+  <section class="wrap rodape-cases">
+    <p>
+      Quer o contexto completo da trajetória? <a href="/sobre">Sobre mim</a> · Quer conversar?
+      <a href="mailto:jjamarmartins@gmail.com">jjamarmartins@gmail.com</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .topo { padding: 64px 24px 36px; }
+  .topo h1 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); margin: 14px 0 18px; }
+  .intro { max-width: 620px; color: var(--ink-2); margin: 0; }
+  .rodape-cases { padding-top: 48px; font-size: 0.95rem; color: var(--ink-3); }
+  .rodape-cases a { color: var(--red); }
+</style>
