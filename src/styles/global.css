@@ -236,6 +236,10 @@ h1, h2, h3 {
 .telas figure:first-child {
   grid-column: 1 / -1;
 }
+/* variacao para poucas telas ou telas largas: cada uma ocupa a linha inteira */
+.telas--largura figure {
+  grid-column: 1 / -1;
+}
 .telas img {
   display: block;
   width: 100%;
