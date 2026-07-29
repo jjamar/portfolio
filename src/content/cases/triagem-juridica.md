@@ -4,7 +4,7 @@ tag: "IA responsável · Projeto pessoal"
 natureza: builder
 ordem: 4
 resumo: >-
-  Construí uma automação no-code, em operação, que faz a triagem de publicações de diário
+  Construí uma automação no-code, funcional ponta a ponta, que faz a triagem de publicações de diário
   oficial: extrai dados estruturados com LLM (Claude Haiku via API Anthropic), cruza com uma base
   de processos que simula um CRM, identifica responsáveis, alimenta um painel de acompanhamento e
   envia e-mails marcados como [REVISAR]. A
@@ -12,9 +12,9 @@ resumo: >-
   final acontece sem revisão humana. O case não é sobre IA: é sobre desenhar um processo
   confiável em um domínio onde erro tem consequência.
 cartao: >-
-  Automação em operação que lê publicações de diário oficial com LLM, decide urgência por regras
-  determinísticas e mantém o advogado como decisor final.
-destaques: "Human-in-the-loop · guardrails · em operação"
+  Automação funcional que lê publicações de diário oficial com LLM, identifica urgência por
+  regras determinísticas e mantém o advogado como decisor final.
+destaques: "Human-in-the-loop · guardrails · fluxo executável"
 encontrar: >-
   desenho de processo com IA, guardrails, separação probabilístico × determinístico e
   human-in-the-loop.
@@ -24,8 +24,8 @@ meta:
   - label: "Stack"
     valor: "Make.com, API Anthropic (Claude Haiku), planilha como CRM simulado, Gmail"
   - label: "Status"
-    valor: "Em operação, com dados fictícios de demonstração (caderno do DJERJ)"
-seoTitle: "Automação de triagem jurídica com IA e human-in-the-loop · Jonatan Jamar"
+    valor: "Funcional ponta a ponta, com dados fictícios de demonstração (caderno do DJERJ)"
+seoTitle: "Triagem jurídica com IA e revisão humana · Jonatan Jamar"
 seoDescription: "Automação que extrai publicações de diário oficial com LLM, cruza com a base de processos e cria alertas provisórios, mantendo o advogado como decisor final."
 proximoSlug: "area-produtos-digitais"
 proximoTitulo: "Uma área de produtos digitais construída do zero"
@@ -71,7 +71,7 @@ Qualquer pessoa consegue pedir a um LLM que "leia um PDF e crie eventos na agend
 
 ## Resultados e estágio
 
-- Automação em operação de ponta a ponta, demonstrável com dados fictícios.
+- Automação funcional ponta a ponta, demonstrável com dados fictícios.
 - Evidência prática de IA aplicada com governança: extração por LLM, decisão determinística, human-in-the-loop, auditoria.
 
 ## Aprendizados

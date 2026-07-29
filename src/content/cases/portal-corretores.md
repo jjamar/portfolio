@@ -1,10 +1,10 @@
 ---
 title: "A virada do Portal dos Corretores"
-tag: "Estratégia, discovery e entrega"
+tag: "Estratégia, discovery e entrega · Bradesco Saúde"
 natureza: enterprise
 ordem: 2
 resumo: >-
-  Durante o programa de Trainee Experts, liderei a modernização do Portal dos Corretores da
+  Durante o programa Trainee Expert Bradesco, liderei a modernização do Portal dos Corretores da
   Bradesco Saúde, produto B2B usado por mais de 40 mil corretores. Conduzi Discovery estruturado e
   entrevistas presenciais e remotas com diferentes corretoras, segmentei o problema entre grandes
   corretoras e corretores individuais e evoluí o produto por MVPs e testes A/B em produção. O NPS
@@ -12,7 +12,7 @@ resumo: >-
   promoção a Group Product Manager.
 cartao: >-
   Discovery segmentado por porte e testes A/B em produção em um B2B com 40 mil corretores. O NPS
-  saiu de 16 para 47 e fui promovido a GPM.
+  saiu de 16 para 47 em um case que contribuiu para minha promoção a GPM.
 destaques: "NPS 16 → 47 · 58% novos acessos · 40 mil corretores"
 encontrar: >-
   discovery com segmentação por porte, testes A/B com grupo de controle em produção, o trade-off
@@ -40,7 +40,7 @@ O portal tratava públicos radicalmente diferentes como se fossem um só. Uma gr
 
 ## Meu papel
 
-PM responsável pela modernização, de ponta a ponta: discovery, priorização, definição de jornada, articulação com tecnologia, negócio e design, experimentação e acompanhamento de indicadores. Eu estava no programa de trainee; a responsabilidade pelo produto era minha.
+PM responsável pela modernização, de ponta a ponta: discovery, priorização, definição de jornada, articulação com tecnologia, negócio e design, experimentação e acompanhamento de indicadores. Eu estava no programa Trainee Expert Bradesco; a responsabilidade pelo produto era minha.
 
 ## Restrições
 
