@@ -1,15 +1,15 @@
 ---
 title: "A virada do Portal dos Corretores"
-tag: "Product craft · Bradesco Saúde"
+tag: "Discovery e entrega"
 natureza: enterprise
 ordem: 3
 resumo: >-
-  Liderei a modernização do Portal dos Corretores da Bradesco Saúde, produto B2B usado por mais
-  de 40 mil corretores, durante o programa de trainee. Conduzi discovery presencial e remoto com
-  corretoras de portes diferentes, segmentei o problema entre grandes corretoras e corretores
-  individuais e evoluí o produto por MVPs e testes A/B em produção. O NPS saiu de 16 para 47 e o
-  portal registrou 58% de novos acessos. O resultado contribuiu para minha promoção a Group
-  Product Manager.
+  Durante o programa de Trainee Experts, liderei a modernização do Portal dos Corretores da
+  Bradesco Saúde, produto B2B usado por mais de 40 mil corretores. Conduzi Discovery estruturado e
+  entrevistas presenciais e remotas com diferentes corretoras, segmentei o problema entre grandes
+  corretoras e corretores individuais e evoluí o produto por MVPs e testes A/B em produção. O NPS
+  saiu de 16 para 47 e o portal registrou 58% de novos acessos. O resultado contribuiu para minha
+  promoção a Group Product Manager.
 destaques: "NPS 16 → 47 · 58% novos acessos · 40 mil corretores"
 encontrar: >-
   discovery com segmentação por porte, testes A/B com grupo de controle em produção, o trade-off
@@ -20,7 +20,7 @@ meta:
   - label: "Escala"
     valor: "40 mil corretores (B2B)"
   - label: "Resultado"
-    valor: "NPS 16 → 47 · 58% de novos acessos"
+    valor: "NPS 16 → 47 (Mercado) / 41 para 71 (Rede – venda exclusiva para Bradesco) · 58% de novos acessos"
 seoTitle: "A virada do Portal dos Corretores · Jonatan Jamar"
 seoDescription: "Discovery com corretoras de portes diferentes, experimentação em produção e NPS de 16 para 47 em um produto B2B usado por 40 mil corretores."
 proximoSlug: "area-produtos-digitais"
@@ -66,11 +66,11 @@ Experimentar em produção, num produto B2B enterprise, foi uma escolha delibera
 
 **Evoluir sobre o legado ou reescrever.** O portal rodava sobre Java Portlet. O dilema central da modernização: continuar entregando funcionalidades sobre a tecnologia antiga, com valor imediato para o corretor mas dívida técnica crescente, ou reescrever o produto em Angular, ganhando suporte a componentes modernos de design, mais segurança, mais velocidade e uma stack atualizada, ao custo de capacidade de entrega no curto prazo. Não era uma decisão de tecnologia: era uma decisão sobre onde o canal de vendas estaria em dois anos.
 
-Após analisar prós e contras dos dois cenários, a escolha foi a reescrita completa em Angular: a opção mais inteligente no longo prazo. E o custo de curto prazo foi administrado sem sacrificar a experiência dos corretores: pequenas melhorias continuaram sendo entregues no portal antigo enquanto a reescrita acontecia. Modernizar não precisou significar parar.
+Após analisar prós e contras dos dois cenários, a escolha foi a reescrita completa em Angular: a opção mais inteligente no longo prazo. E o custo de curto prazo foi administrado sem sacrificar a experiência dos corretores: pequenas melhorias continuaram sendo entregues no portal antigo enquanto a reescrita acontecia. Uma forma de sinalizar aos corretores que as reclamações estavam sendo atendidas.
 
 ## Resultados
 
-- **NPS de 16 para 47.**
+- **NPS de 16 para 47 (Mercado)** e de **41 para 71 (Rede – venda exclusiva para Bradesco)**.
 - **58% de novos acessos** registrados no portal.
 - O trabalho contribuiu diretamente para minha promoção a Group Product Manager ao fim do programa.
 
@@ -84,8 +84,6 @@ O card de Propostas me deu a lição mais barata que um PM pode comprar. A propo
 - Experimento em produção é também ferramenta de influência: dados de A/B encerram debates que opinião nenhuma encerraria.
 - Clique alto no lançamento não é sucesso. Sem resolver o job completo, o engajamento despenca; métrica de vaidade só adia a conversa difícil.
 
-<div class="placeholder">Evidências visuais planejadas: gráfico da evolução do NPS (16 → 47) e diagrama do experimento do card de faturas (duas versões + grupo de controle por porte). Nenhuma tela interna será exibida.</div>
-
 ## Competências demonstradas
 
-Discovery qualitativo · segmentação de usuários B2B · priorização · MVPs · testes A/B com grupo de controle · métricas de experiência (NPS) · influência sem autoridade · articulação com tecnologia e negócio
+Product Discovery · Segmentação de usuários B2B · Priorização · Análise de dados · MVPs · Testes A/B com grupo de controle · Métricas de experiência (NPS) · Influência sem autoridade · Articulação com tecnologia e negócio
