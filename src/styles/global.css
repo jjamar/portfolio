@@ -248,6 +248,14 @@ h1, h2, h3 {
 .telas--cartaz figure {
   max-width: 440px;
 }
+/* foto de contexto dentro de um texto corrido: grande, mas sem dominar a coluna */
+.telas--foto {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+.telas--foto figure {
+  max-width: 520px;
+}
 .telas img {
   display: block;
   width: 100%;

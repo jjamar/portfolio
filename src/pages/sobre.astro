@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Lightbox from '../components/Lightbox.astro';
 
 const timeline = [
   {
@@ -91,6 +92,25 @@ const certificacoes = [
         indiretamente, 7 canais digitais e mais de 2 milhões de usuários ativos, reportando a
         Diretores e ao CEO.
       </p>
+
+      <div class="telas telas--foto">
+        <figure>
+          <img
+            src="/fotos/sobre/01-apresentacao-auditorio.webp"
+            alt="Jonatan Jamar no palco do auditório da Bradesco Seguros, de microfone na mão, apresentando para o time de Operações Saúde"
+            width="810"
+            height="1045"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            Gerando conexões através da entrega de valor. Apresentação para o time de Operações
+            Saúde sobre experiência do cliente e o papel da entrega de valor na construção de
+            relacionamentos.
+          </figcaption>
+        </figure>
+      </div>
+
       <p>
         Em 2025, encerrei o ciclo Bradesco e escolhi fazer uma imersão deliberada em IA aplicada a
         produto: formação AI Product Leaders (TERA), cursos de extensão e construção hands-on.
@@ -142,6 +162,8 @@ const certificacoes = [
       {certificacoes.map((c) => <li>{c}</li>)}
     </ul>
   </section>
+
+  <Lightbox />
 </Base>
 
 <style>
