@@ -240,6 +240,14 @@ h1, h2, h3 {
 .telas--largura figure {
   grid-column: 1 / -1;
 }
+/* variacao para peca de comunicacao: miniatura recortada, sem esticar alem do tamanho nativo */
+.telas--cartaz {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+.telas--cartaz figure {
+  max-width: 440px;
+}
 .telas img {
   display: block;
   width: 100%;

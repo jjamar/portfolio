@@ -54,12 +54,30 @@ Responsável pela construção da área e pela liderança do grupo de produtos: 
 
 **Destaque:** Avaliação de liderança de produtos nota 3,9/4,0, reconhecido como líder de alta performance.
 
+## Da entrega à adoção
+
+Construir uma área de produtos não era apenas organizar times, indicadores e rituais. Também exigia aproximar quem desenvolvia os canais digitais de quem os utilizava no dia a dia.
+
+Em maio de 2025, apresentei, ao lado do Product Manager Caio Lima e do Superintendente Sênior Giuliano Borro, uma live sobre as novidades do Portal de Negócios da Bradesco Saúde. A transmissão alcançou mais de 2.500 participantes e obteve cerca de 95% de aprovação do público.
+
+<div class="telas telas--cartaz">
+  <figure>
+    <img src="/fotos/area-produtos-digitais/01-live-portal-negocios-miniatura.webp" data-full="/fotos/area-produtos-digitais/01-live-portal-negocios.webp" alt="Convite da live Novidades no Portal de Negócios Saúde, da Bradesco Saúde, com data, link de acesso, os três apresentadores e a lista de temas abordados" width="531" height="440" loading="lazy" decoding="async" />
+    <figcaption>Live Novidades no Portal de Negócios — Saúde, realizada em maio de 2025 para mais de 2.500 participantes. Clique para ver o convite completo.</figcaption>
+  </figure>
+</div>
+
+Além de apresentar novas funcionalidades, a iniciativa criou um canal direto para esclarecer dúvidas, traduzir entregas em valor percebido e fortalecer a conexão entre produto, negócio e corretores.
+
+**Destaque:** 2.500+ participantes · aproximadamente 95% de aprovação.
+
 ## Resultados
 
 - App Bradesco Saúde: usuários ativos mensais de **1,1 para 1,5 milhão (+36%)**, com **86% de engajamento**.
 - Plataforma de Chamados B2B: **100% de digitalização** do escopo tratado, **CSAT 4,93**.
 - Jornada de boleto: **70% menos chamados**, **R$ 790 mil/ano** de economia estimada.
 - Time: **duas promoções**, avaliação de liderança **3,9/4,0**.
+- Comunicação e adoção: live do Portal de Negócios para **mais de 2.500 participantes**, com **aproximadamente 95% de aprovação**.
 - Mais de 50 entregas relevantes no ecossistema no período, consequência da operação estruturada (o resultado que importa está nos indicadores acima, não no volume).
 
 ## Aprendizados

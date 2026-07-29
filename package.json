@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "node scripts/limpar-cache.mjs && astro dev",
+    "build": "node scripts/limpar-cache.mjs && astro build",
+    "preview": "astro preview",
+    "limpar": "node scripts/limpar-cache.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",

@@ -71,6 +71,13 @@
     border-radius: 8px;
     background: var(--cream-2);
   }
+  /* Imagem muito mais alta que larga (peça de comunicação, print de página inteira):
+     travar pela altura a encolheria abaixo da largura nativa e o texto ficaria ilegível.
+     Nesses casos vale a largura e o lightbox rola na vertical. */
+  .lb-alta { overflow-y: auto; overscroll-behavior: contain; }
+  .lb-alta[open] { place-items: start center; }
+  .lb-alta .lb-fig { max-height: none; }
+  .lb-alta .lb-img { max-height: none; }
   .lb-fig figcaption {
     display: flex;
     align-items: baseline;
@@ -164,7 +171,8 @@
       .map((fig) => {
         const i = fig.querySelector('img');
         const cap = fig.querySelector('figcaption');
-        return i ? { src: i.currentSrc || i.src, alt: i.alt, texto: cap?.textContent?.trim() ?? '' } : null;
+        // data-full permite miniatura recortada na página e imagem inteira no lightbox.
+        return i ? { src: i.dataset.full || i.currentSrc || i.src, alt: i.alt, texto: cap?.textContent?.trim() ?? '' } : null;
       })
       .filter((t): t is { src: string; alt: string; texto: string } => t !== null);
 
@@ -175,14 +183,27 @@
     let atual = 0;
     let origem: HTMLElement | null = null;
 
+    // Imagem bem mais alta que larga não pode ser limitada pela altura da janela:
+    // encolheria abaixo da largura nativa. Nesse caso o lightbox passa a rolar.
+    function ajustarProporcao() {
+      if (!img.naturalWidth) return;
+      dlg.classList.toggle('lb-alta', img.naturalHeight / img.naturalWidth > 1.6);
+      dlg.scrollTop = 0;
+    }
+
     function mostrar(i: number) {
       atual = (i + telas.length) % telas.length;
       const t = telas[atual];
+      dlg.classList.remove('lb-alta');
       img.src = t.src;
       img.alt = t.alt;
       legenda.textContent = t.texto;
       contador.textContent = varias ? `${atual + 1} / ${telas.length}` : '';
+      // Imagem em cache já chega pronta e não dispara load.
+      if (img.complete) ajustarProporcao();
     }
+
+    img.addEventListener('load', ajustarProporcao);
 
     function abrir(i: number, disparo: HTMLElement) {
       origem = disparo;
