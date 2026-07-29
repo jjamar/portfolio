@@ -11,6 +11,9 @@ resumo: >-
   classificação de urgência é feita por regras determinísticas fora do modelo, e nenhuma ação
   final acontece sem revisão humana. O case não é sobre IA: é sobre desenhar um processo
   confiável em um domínio onde erro tem consequência.
+cartao: >-
+  Automação em operação que lê publicações de diário oficial com LLM, decide urgência por regras
+  determinísticas e mantém o advogado como decisor final.
 destaques: "Human-in-the-loop · guardrails · em operação"
 encontrar: >-
   desenho de processo com IA, guardrails, separação probabilístico × determinístico e
@@ -24,8 +27,8 @@ meta:
     valor: "Em operação, com dados fictícios de demonstração (caderno do DJERJ)"
 seoTitle: "Automação de triagem jurídica com IA e human-in-the-loop · Jonatan Jamar"
 seoDescription: "Automação que extrai publicações de diário oficial com LLM, cruza com a base de processos e cria alertas provisórios, mantendo o advogado como decisor final."
-proximoSlug: "feira-viva"
-proximoTitulo: "Feira Viva"
+proximoSlug: "area-produtos-digitais"
+proximoTitulo: "Uma área de produtos digitais construída do zero"
 ---
 
 ## Contexto

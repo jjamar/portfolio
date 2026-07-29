@@ -2,13 +2,16 @@
 title: "Feira Viva"
 tag: "Builder · Projeto pessoal"
 natureza: builder
-ordem: 1
+ordem: 3
 resumo: >-
   Concebi, arquitetei e implementei sozinho o Feira Viva, uma plataforma web para descoberta de
   feiras livres e reserva de produtos para retirada presencial. Defini problema, escopo, modelo
   de dados e regras de autorização; usei IA (Lovable e Claude Code) como aceleradora de
   construção. O MVP está funcional e publicado. É um projeto de aprendizagem: o objetivo era
   provar, na prática, o ciclo completo de concepção a deploy.
+cartao: >-
+  Concebi, arquitetei e implementei sozinho uma plataforma web, do corte de escopo ao deploy, com
+  IA como aceleradora. MVP funcional e publicado.
 destaques: "MVP em produção · React · Supabase · RLS"
 encontrar: >-
   corte de escopo de MVP, decisões de arquitetura (SSR, RLS), uso de IA como aceleradora e o que
@@ -23,8 +26,8 @@ meta:
 seoTitle: "Feira Viva, do problema ao deploy · Jonatan Jamar"
 seoDescription: "Como concebi, arquitetei e implementei uma plataforma de descoberta de feiras livres com React, Supabase e IA como aceleradora."
 linkVivo: "https://feira-local.vercel.app"
-proximoSlug: "portal-corretores"
-proximoTitulo: "A virada do Portal dos Corretores"
+proximoSlug: "triagem-juridica"
+proximoTitulo: "Triagem de publicações jurídicas com IA e revisão humana"
 ---
 
 ## Contexto

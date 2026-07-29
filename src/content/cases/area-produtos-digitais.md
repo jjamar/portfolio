@@ -2,14 +2,17 @@
 title: "Uma área de produtos digitais construída do zero"
 tag: "Liderança e operating model · Bradesco Saúde"
 natureza: enterprise
-ordem: 2
+ordem: 1
 resumo: >-
   Como Group Product Manager na Bradesco Saúde, construí do zero a área de produtos digitais:
   time, processos, governança, priorização e acompanhamento de resultados. Liderei diretamente 9
   PMs e POs e indiretamente cerca de 40 profissionais, respondendo por um ecossistema regulado de 7
-  canais digitais (B2B, B2B2C e beneficiários) com mais de 2 milhões de usuários, reportando a
+  canais digitais (B2B, B2B2C e beneficiários) com mais de 2 milhões de usuários ativos, reportando a
   Diretores e CEO. No período, o App Saúde cresceu de 1,1 para 1,5 milhão de usuários ativos
   mensais (+36%), com 86% de engajamento, e o time teve duas promoções: PO Jr a Pleno e PO a PM.
+cartao: >-
+  Transformei uma operação orientada a projetos em uma área de produto com donos, cadência e
+  dados. 9 PMs e POs diretos, 7 canais e 2M+ MAU em ambiente regulado.
 destaques: "+36% MAU · 86% engajamento · 2 promoções no time"
 encontrar: >-
   o problema organizacional, os mecanismos criados (ownership, cadência, dados, governança) e os
@@ -18,13 +21,13 @@ meta:
   - label: "Papel"
     valor: "GPM, construção e liderança da área"
   - label: "Escala"
-    valor: "7 canais · 2M+ usuários · 9 diretos · ~40 indiretos"
+    valor: "7 canais · 2M+ MAU · 9 diretos · ~40 indiretos"
   - label: "Ambiente"
     valor: "Regulado (ANS, LGPD)"
 seoTitle: "Construindo uma área de produtos digitais do zero · Jonatan Jamar"
-seoDescription: "Como estruturei time, governança e portfólio para 7 canais digitais e mais de 2 milhões de usuários, como Group Product Manager na Bradesco Saúde."
-proximoSlug: "triagem-juridica"
-proximoTitulo: "Triagem de publicações jurídicas com IA e revisão humana"
+seoDescription: "Como estruturei time, governança e portfólio para 7 canais digitais e mais de 2 milhões de usuários ativos, como Group Product Manager na Bradesco Saúde."
+proximoSlug: "portal-corretores"
+proximoTitulo: "A virada do Portal dos Corretores"
 ---
 
 ## O problema organizacional

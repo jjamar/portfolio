@@ -11,6 +11,7 @@ const cases = defineCollection({
     natureza: z.enum(['enterprise', 'builder']),
     ordem: z.number(),
     resumo: z.string(),
+    cartao: z.string(),
     destaques: z.string(),
     encontrar: z.string(),
     meta: z.array(z.object({ label: z.string(), valor: z.string() })),

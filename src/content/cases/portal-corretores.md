@@ -1,8 +1,8 @@
 ---
 title: "A virada do Portal dos Corretores"
-tag: "Discovery e entrega"
+tag: "Estratégia, discovery e entrega"
 natureza: enterprise
-ordem: 3
+ordem: 2
 resumo: >-
   Durante o programa de Trainee Experts, liderei a modernização do Portal dos Corretores da
   Bradesco Saúde, produto B2B usado por mais de 40 mil corretores. Conduzi Discovery estruturado e
@@ -10,6 +10,9 @@ resumo: >-
   corretoras e corretores individuais e evoluí o produto por MVPs e testes A/B em produção. O NPS
   saiu de 16 para 47 e o portal registrou 58% de novos acessos. O resultado contribuiu para minha
   promoção a Group Product Manager.
+cartao: >-
+  Discovery segmentado por porte e testes A/B em produção em um B2B com 40 mil corretores. O NPS
+  saiu de 16 para 47 e fui promovido a GPM.
 destaques: "NPS 16 → 47 · 58% novos acessos · 40 mil corretores"
 encontrar: >-
   discovery com segmentação por porte, testes A/B com grupo de controle em produção, o trade-off
@@ -23,8 +26,8 @@ meta:
     valor: "NPS 16 → 47 (Mercado) / 41 para 71 (Rede – venda exclusiva para Bradesco) · 58% de novos acessos"
 seoTitle: "A virada do Portal dos Corretores · Jonatan Jamar"
 seoDescription: "Discovery com corretoras de portes diferentes, experimentação em produção e NPS de 16 para 47 em um produto B2B usado por 40 mil corretores."
-proximoSlug: "area-produtos-digitais"
-proximoTitulo: "Uma área de produtos digitais construída do zero"
+proximoSlug: "feira-viva"
+proximoTitulo: "Feira Viva"
 ---
 
 ## Contexto

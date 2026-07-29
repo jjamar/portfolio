@@ -5,7 +5,7 @@ export interface CaseInfo {
   title: string;
   tag: string;
   natureza: 'enterprise' | 'builder';
-  resumoCard: string;
+  cartao: string;
   destaques: string;
   encontrar?: string;
 }
@@ -15,7 +15,7 @@ export default function CaseCard({ c, comEncontrar = false }: { c: CaseInfo; com
     <a className="card" href={`/cases/${c.slug}`}>
       <span className="eyebrow eyebrow-red">{c.tag}</span>
       <span className="card-title">{c.title}</span>
-      <p className="card-desc">{c.resumoCard}</p>
+      <p className="card-desc">{c.cartao}</p>
       {comEncontrar && c.encontrar ? (
         <p className="card-desc" style={{ fontSize: '0.88rem' }}>
           <strong style={{ fontWeight: 500 }}>O que você vai encontrar:</strong> {c.encontrar}
