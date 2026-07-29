@@ -8,11 +8,11 @@ resumo: >-
   time, processos, governança, priorização e acompanhamento de resultados. Liderei diretamente 9
   PMs e POs e indiretamente cerca de 40 profissionais, respondendo por um ecossistema regulado de 7
   canais digitais (B2B, B2B2C e beneficiários) com mais de 2 milhões de usuários ativos, reportando a
-  Diretores e CEO. No período, o App Saúde cresceu de 1,1 para 1,5 milhão de usuários ativos
+  Diretores e CEO. No período, o App Bradesco Saúde cresceu de 1,1 para 1,5 milhão de usuários ativos
   mensais (+36%), com 86% de engajamento, e o time teve duas promoções: PO Jr a Pleno e PO a PM.
 cartao: >-
   Transformei uma operação orientada a projetos em uma área de produto com donos, cadência e
-  dados. 9 PMs e POs diretos, 7 canais e 2M+ MAU em ambiente regulado.
+  dados. 9 PMs e POs diretos, 7 canais digitais e 2M+ MAU em ambiente regulado.
 destaques: "+36% MAU · 86% engajamento · 2 promoções no time"
 encontrar: >-
   o problema organizacional, os mecanismos criados (ownership, cadência, dados, governança) e os
@@ -21,7 +21,7 @@ meta:
   - label: "Papel"
     valor: "GPM, construção e liderança da área"
   - label: "Escala"
-    valor: "7 canais · 2M+ MAU · 9 diretos · ~40 indiretos"
+    valor: "7 canais digitais · 2M+ MAU · 9 diretos · ~40 indiretos"
   - label: "Ambiente"
     valor: "Regulado (ANS, LGPD)"
 seoTitle: "Construindo uma área de produtos digitais do zero · Jonatan Jamar"
@@ -32,21 +32,21 @@ proximoTitulo: "A virada do Portal dos Corretores"
 
 ## O problema organizacional
 
-A operação digital funcionava orientada a projetos: iniciativas com começo, meio e fim, sem ownership contínuo sobre os canais e seus resultados.
+A operação digital funcionava orientada a projetos: iniciativas com começo, meio e fim, sem ownership contínuo sobre os canais digitais e seus resultados.
 
-A missão era transformar isso em uma operação orientada a produtos: canais com donos, decisões com dados, prioridade disputada por impacto e resultado acompanhado continuamente.
+A missão era transformar isso em uma operação orientada a produtos: canais digitais com donos, decisões com dados, prioridade disputada por impacto e resultado acompanhado continuamente.
 
 ## Meu papel
 
-Responsável pela construção da área e pela liderança do grupo de produtos: desenho da estrutura, definição de governança e rituais, priorização de portfólio, desenvolvimento das pessoas e resposta pelos resultados dos canais perante Diretoria e CEO.
+Responsável pela construção da área e pela liderança do grupo de produtos: desenho da estrutura, definição de governança e rituais, priorização de portfólio, desenvolvimento das pessoas e resposta pelos resultados dos canais digitais perante Diretoria e CEO.
 
 ## Mecanismos criados
 
-**Estrutura e ownership.** Times organizados por canal, com PMs e POs donos de produto, indicador e roadmap, cobrindo aplicativo, portais de beneficiários, empresas, corretores e rede referenciada.
+**Estrutura e ownership.** Times organizados por canal digital, com PMs e POs donos de produto, indicador e roadmap, cobrindo aplicativo, portais de beneficiários, empresas, corretores e rede referenciada.
 
 **Cadência e priorização.** Ciclos de planejamento e priorização de aproximadamente três meses (SAFe), balanceando portfólio, dependências e capacidade entre times. Prioridade disputada por impacto, com trade-offs explícitos.
 
-**Dados e acompanhamento.** OKRs acompanhados via Power BI, dashboards de canais em Looker e monitoramento de disponibilidade e performance via Dynatrace. Resultado de canal deixou de ser percepção e virou número recorrente em ritual executivo.
+**Dados e acompanhamento.** OKRs acompanhados via Power BI, dashboards de canais digitais em Looker e monitoramento de disponibilidade e performance via Dynatrace. Resultado de canal digital deixou de ser percepção e virou número recorrente em ritual executivo.
 
 **Governança em ambiente regulado.** LGPD e requisitos da ANS incorporados ao fluxo de descoberta e entrega, com jurídico, compliance e operações como stakeholders permanentes do processo, não como barreira ao final dele.
 
@@ -56,7 +56,7 @@ Responsável pela construção da área e pela liderança do grupo de produtos: 
 
 ## Resultados
 
-- App Saúde: usuários ativos mensais de **1,1 para 1,5 milhão (+36%)**, com **86% de engajamento**.
+- App Bradesco Saúde: usuários ativos mensais de **1,1 para 1,5 milhão (+36%)**, com **86% de engajamento**.
 - Plataforma de Chamados B2B: **100% de digitalização** do escopo tratado, **CSAT 4,93**.
 - Jornada de boleto: **70% menos chamados**, **R$ 790 mil/ano** de economia estimada.
 - Time: **duas promoções**, avaliação de liderança **3,9/4,0**.
