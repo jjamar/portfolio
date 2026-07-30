@@ -73,6 +73,27 @@ const destaquesMenores = [
   },
 ];
 
+const depoimentos = [
+  {
+    nome: 'Samara Cherem',
+    cargo: 'Associate Product Manager',
+    foto: '/fotos/depoimentos/samara-cherem.webp',
+    alt: 'Retrato de Samara Cherem',
+    linkedin: 'https://www.linkedin.com/in/samara-martins-cherem-a272a4176/',
+    texto:
+      'Sua orientação prática sobre visão de produto alinhada à visão de mercado trouxe clareza para minha postura profissional. Ele não apenas me ajudou a destravar meu potencial [...], mas também me deu muita confiança para tomar decisões mais assertivas.',
+  },
+  {
+    nome: 'José Carlos Machado',
+    cargo: 'Product Owner',
+    foto: '/fotos/depoimentos/jose-carlos-machado.webp',
+    alt: 'Retrato de José Carlos Machado',
+    linkedin: null,
+    texto:
+      'Jamar sempre demonstrou uma visão estratégica muito clara, excelente capacidade de comunicação e grande habilidade para conectar diferentes áreas em torno dos objetivos do produto. [...] Ele constantemente trazia novas formas de trabalhar, compartilhava dicas práticas para otimizar nosso dia a dia e estimulava o time a pensar de forma mais estratégica.',
+  },
+];
+
 const principios = [
   ['Resultado acima de entrega.', 'O valor gerado é medido pelo problema resolvido e por métricas de sucesso, não pelo volume de entregas.'],
   ['Validar antes de escalar.', 'Protótipos, automações e validações manuais reduzem incertezas antes de mobilizar o desenvolvimento completo.'],
@@ -186,6 +207,31 @@ const principios = [
     </div>
   </section>
 
+  <section class="section wrap" aria-label="Depoimentos de pessoas que trabalharam comigo">
+    <h2 class="section-title">Como é trabalhar comigo</h2>
+    <div class="depo-lista">
+      {depoimentos.map((d) => (
+        <figure class="depo">
+          <img src={d.foto} alt={d.alt} width="108" height="108" loading="lazy" />
+          <div>
+            <blockquote class="depo-quote">“{d.texto}”</blockquote>
+            <figcaption>
+              <p class="depo-nome">{d.nome}</p>
+              <p class="depo-cargo">{d.cargo}</p>
+              {d.linkedin && (
+                <p class="depo-link">
+                  <a class="link-red" href={d.linkedin} target="_blank" rel="noopener">
+                    Depoimento completo no LinkedIn →
+                  </a>
+                </p>
+              )}
+            </figcaption>
+          </div>
+        </figure>
+      ))}
+    </div>
+  </section>
+
   <section class="section wrap">
     <h2 class="section-title">Princípios de trabalho</h2>
     <ol class="principios">
@@ -230,6 +276,26 @@ const principios = [
   .link-red { color: var(--red); font-weight: 500; text-decoration-color: var(--red); }
   @media (max-width: 720px) {
     .sobre-mini { flex-direction: column; align-items: flex-start; }
+  }
+
+  .depo-lista { display: flex; flex-direction: column; }
+  .depo + .depo { margin-top: 38px; border-top: 1px solid var(--line); padding-top: 38px; }
+  .depo { display: flex; gap: 30px; align-items: flex-start; max-width: 860px; margin: 0; }
+  .depo img {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .depo-quote { font-size: 1.18rem; line-height: 1.62; color: var(--navy); margin: 0 0 20px; }
+  .depo-nome { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; margin: 0; }
+  .depo-cargo { font-size: 0.88rem; color: var(--ink-3); margin: 2px 0 0; }
+  .depo-link { font-size: 0.86rem; margin: 14px 0 0; }
+  @media (max-width: 720px) {
+    .depo { flex-direction: column; gap: 20px; }
+    .depo img { width: 88px; height: 88px; }
+    .depo-quote { font-size: 1.06rem; }
   }
 
   .principios { margin: 0; padding-left: 1.3em; max-width: 720px; }

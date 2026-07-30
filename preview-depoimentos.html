@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview · Liderança que desenvolve pessoas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --line: #e3dccc;
+    --line-2: #d0c7b5;
+    --navy: #0d1b2a;
+    --ink-2: #3c4657;
+    --ink-3: #5c6474;
+    --sand: #8a7f68;
+    --red: #e84c2b;
+    --font-display: 'Sora', system-ui, sans-serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --wrap: 1060px;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--cream); color: var(--navy); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  body { margin: 0; font-size: 1.0625rem; line-height: 1.7; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--navy); text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+  a:hover { color: var(--red); text-decoration-color: var(--red); }
+  h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.015em; line-height: 1.22; margin: 0; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  .section { padding: 56px 0; }
+  .section-title { font-size: clamp(1.3rem, 2.6vw, 1.6rem); margin-bottom: 26px; }
+  .link-red { color: var(--red); font-weight: 500; text-decoration-color: var(--red); }
+
+  .preview-bar { background: var(--navy); color: var(--cream); padding: 14px 0; font-size: 0.82rem; }
+  .preview-bar strong { font-family: var(--font-display); font-weight: 600; }
+  .ctx { color: var(--ink-3); font-size: 0.86rem; padding: 20px 0; margin: 0; border-bottom: 1px solid var(--line); }
+  .vizinha { color: var(--ink-3); font-size: 0.86rem; font-style: italic; padding: 0 0 8px; margin: 0; }
+
+  .depo-lista { display: flex; flex-direction: column; }
+  .depo + .depo { margin-top: 38px; border-top: 1px solid var(--line); padding-top: 38px; }
+  .depo { display: flex; gap: 30px; align-items: flex-start; max-width: 860px; margin: 0; }
+  .depo img { width: 108px; height: 108px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  .depo-quote { font-size: 1.18rem; line-height: 1.62; color: var(--navy); margin: 0 0 20px; }
+  .depo-nome { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; margin: 0; }
+  .depo-cargo { font-size: 0.88rem; color: var(--ink-3); margin: 2px 0 0; }
+  .depo-link { font-size: 0.86rem; margin: 14px 0 0; }
+  @media (max-width: 720px) {
+    .depo { flex-direction: column; gap: 20px; }
+    .depo img { width: 88px; height: 88px; }
+    .depo-quote { font-size: 1.06rem; }
+  }
+
+  .principios { margin: 0; padding-left: 1.3em; max-width: 720px; }
+  .principios li { margin-bottom: 12px; color: var(--ink-3); font-size: 0.98rem; }
+  .principios strong { color: var(--navy); font-weight: 500; font-family: var(--font-display); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">
+  <div class="wrap"><strong>Preview local</strong> · seção implementada na home entre "Quem decide e constrói" e "Princípios de trabalho"</div>
+</div>
+
+<main>
+  <p class="ctx wrap">↑ acima, na home real, fica a seção "Quem decide e constrói"</p>
+
+  <section class="section wrap">
+    <h2 class="section-title">Como é trabalhar comigo</h2>
+    <div class="depo-lista">
+      <figure class="depo">
+        <img src="public/fotos/depoimentos/samara-cherem.webp" alt="Retrato de Samara Cherem" width="108" height="108" loading="lazy">
+        <div>
+          <blockquote class="depo-quote">
+            “Sua orientação prática sobre visão de produto alinhada à visão de mercado trouxe clareza
+            para minha postura profissional. Ele não apenas me ajudou a destravar meu potencial [...],
+            mas também me deu muita confiança para tomar decisões mais assertivas.”
+          </blockquote>
+          <figcaption>
+            <p class="depo-nome">Samara Cherem</p>
+            <p class="depo-cargo">Associate Product Manager</p>
+            <p class="depo-link">
+              <a class="link-red" href="https://www.linkedin.com/in/samara-martins-cherem-a272a4176/" target="_blank" rel="noopener">Depoimento completo no LinkedIn →</a>
+            </p>
+          </figcaption>
+        </div>
+      </figure>
+      <figure class="depo">
+        <img src="public/fotos/depoimentos/jose-carlos-machado.webp" alt="Retrato de José Carlos Machado" width="108" height="108" loading="lazy">
+        <div>
+          <blockquote class="depo-quote">
+            “Jamar sempre demonstrou uma visão estratégica muito clara, excelente capacidade de
+            comunicação e grande habilidade para conectar diferentes áreas em torno dos objetivos do
+            produto. [...] Ele constantemente trazia novas formas de trabalhar, compartilhava dicas
+            práticas para otimizar nosso dia a dia e estimulava o time a pensar de forma mais
+            estratégica.”
+          </blockquote>
+          <figcaption>
+            <p class="depo-nome">José Carlos Machado</p>
+            <p class="depo-cargo">Product Owner</p>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap" style="border-top: 1px solid var(--line);">
+    <p class="vizinha">Seção seguinte, já existente. Sem colisão de título agora.</p>
+    <h2 class="section-title">Princípios de trabalho</h2>
+    <ol class="principios">
+      <li><strong>Resultado acima de entrega.</strong> O valor gerado é medido pelo problema resolvido e por métricas de sucesso, não pelo volume de entregas.</li>
+      <li><strong>Validar antes de escalar.</strong> Protótipos, automações e validações manuais reduzem incertezas antes de mobilizar o desenvolvimento completo.</li>
+      <li><strong>Dados acima de opinião.</strong> Quando não existem dados disponíveis, transformo premissas em hipóteses explícitas, mensuráveis e testáveis.</li>
+      <li><strong>Regulação como contexto, não como desculpa.</strong> Risco, compliance e privacidade são restrições de projeto, não justificativa para lentidão.</li>
+      <li><strong>Liderança que desenvolve.</strong> Feedback contínuo, autonomia progressiva e responsabilidade por resultado.</li>
+    </ol>
+  </section>
+</main>
+
+</body>
+</html>
