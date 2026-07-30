@@ -79,7 +79,6 @@ const depoimentos = [
     cargo: 'Associate Product Manager',
     foto: '/fotos/depoimentos/samara-cherem.webp',
     alt: 'Retrato de Samara Cherem',
-    linkedin: 'https://www.linkedin.com/in/samara-martins-cherem-a272a4176/',
     texto:
       'Sua orientação prática sobre visão de produto alinhada à visão de mercado trouxe clareza para minha postura profissional. Ele não apenas me ajudou a destravar meu potencial [...], mas também me deu muita confiança para tomar decisões mais assertivas.',
   },
@@ -88,7 +87,6 @@ const depoimentos = [
     cargo: 'Product Owner',
     foto: '/fotos/depoimentos/jose-carlos-machado.webp',
     alt: 'Retrato de José Carlos Machado',
-    linkedin: null,
     texto:
       'Jamar sempre demonstrou uma visão estratégica muito clara, excelente capacidade de comunicação e grande habilidade para conectar diferentes áreas em torno dos objetivos do produto. [...] Ele constantemente trazia novas formas de trabalhar, compartilhava dicas práticas para otimizar nosso dia a dia e estimulava o time a pensar de forma mais estratégica.',
   },
@@ -218,18 +216,16 @@ const principios = [
             <figcaption>
               <p class="depo-nome">{d.nome}</p>
               <p class="depo-cargo">{d.cargo}</p>
-              {d.linkedin && (
-                <p class="depo-link">
-                  <a class="link-red" href={d.linkedin} target="_blank" rel="noopener">
-                    Depoimento completo no LinkedIn →
-                  </a>
-                </p>
-              )}
             </figcaption>
           </div>
         </figure>
       ))}
     </div>
+    <p class="depo-link">
+      <a class="link-red" href="https://www.linkedin.com/in/jonatanjamar/" target="_blank" rel="noopener">
+        Depoimentos completos no LinkedIn →
+      </a>
+    </p>
   </section>
 
   <section class="section wrap">
@@ -291,7 +287,7 @@ const principios = [
   .depo-quote { font-size: 1.18rem; line-height: 1.62; color: var(--navy); margin: 0 0 20px; }
   .depo-nome { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; margin: 0; }
   .depo-cargo { font-size: 0.88rem; color: var(--ink-3); margin: 2px 0 0; }
-  .depo-link { font-size: 0.86rem; margin: 14px 0 0; }
+  .depo-link { font-size: 0.86rem; margin: 26px 0 0; }
   @media (max-width: 720px) {
     .depo { flex-direction: column; gap: 20px; }
     .depo img { width: 88px; height: 88px; }
