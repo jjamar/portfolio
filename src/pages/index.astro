@@ -83,6 +83,22 @@ const depoimentos = [
       'Sua orientação prática sobre visão de produto alinhada à visão de mercado trouxe clareza para minha postura profissional. Ele não apenas me ajudou a destravar meu potencial [...], mas também me deu muita confiança para tomar decisões mais assertivas.',
   },
   {
+    nome: 'Raquel Moraes',
+    cargo: 'Product Manager',
+    foto: '/fotos/depoimentos/raquel-moraes.webp',
+    alt: 'Retrato de Raquel Moraes',
+    texto:
+      'Desde o começo, ele acreditou no meu potencial, soube enxergar meus pontos fortes, me deu espaço para construir [...] e me incentivou a assumir desafios cada vez maiores. Essa confiança foi um dos fatores que contribuíram para que eu fosse promovida a Product Manager. [...] Ele acredita de verdade na construção de uma cultura de Produto e aproveita cada oportunidade para desenvolver as pessoas ao seu redor.',
+  },
+  {
+    nome: 'Thamyres Queiroz Firme',
+    cargo: 'Product Owner',
+    foto: '/fotos/depoimentos/thamyres-queiroz.webp',
+    alt: 'Retrato de Thamyres Queiroz Firme',
+    texto:
+      'Ao longo da minha transição de carreira para Product Owner, tive a sorte de contar com a orientação do Jamar. Em um momento de tantas dúvidas e decisões importantes, ele foi um mentor fundamental. Sempre muito presente, atencioso e disposto a compartilhar conhecimento, me ajudou a enxergar caminhos com mais clareza e confiança. [...] É um líder daqueles que realmente se preocupam com o desenvolvimento das pessoas e fazem questão de impulsionar quem está ao seu redor.',
+  },
+  {
     nome: 'José Carlos Machado',
     cargo: 'Product Owner',
     foto: '/fotos/depoimentos/jose-carlos-machado.webp',
@@ -207,17 +223,17 @@ const principios = [
 
   <section class="section wrap" aria-label="Depoimentos de pessoas que trabalharam comigo">
     <h2 class="section-title">Como é trabalhar comigo</h2>
-    <div class="depo-lista">
+    <div class="depo-grade">
       {depoimentos.map((d) => (
         <figure class="depo">
-          <img src={d.foto} alt={d.alt} width="108" height="108" loading="lazy" />
-          <div>
-            <blockquote class="depo-quote">“{d.texto}”</blockquote>
-            <figcaption>
+          <blockquote class="depo-quote">“{d.texto}”</blockquote>
+          <figcaption>
+            <img src={d.foto} alt={d.alt} width="56" height="56" loading="lazy" />
+            <span>
               <p class="depo-nome">{d.nome}</p>
               <p class="depo-cargo">{d.cargo}</p>
-            </figcaption>
-          </div>
+            </span>
+          </figcaption>
         </figure>
       ))}
     </div>
@@ -274,24 +290,30 @@ const principios = [
     .sobre-mini { flex-direction: column; align-items: flex-start; }
   }
 
-  .depo-lista { display: flex; flex-direction: column; }
-  .depo + .depo { margin-top: 38px; border-top: 1px solid var(--line); padding-top: 38px; }
-  .depo { display: flex; gap: 30px; align-items: flex-start; max-width: 860px; margin: 0; }
+  .depo-grade { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 44px; }
+  .depo {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--navy);
+    padding-top: 20px;
+  }
+  /* flex: 1 na citação alinha os rodapés dos dois cards da mesma linha,
+     mesmo com depoimentos de tamanhos diferentes. */
+  .depo-quote { font-size: 1rem; line-height: 1.62; color: var(--ink-2); margin: 0 0 22px; flex: 1; }
+  .depo figcaption { display: flex; gap: 14px; align-items: center; }
   .depo img {
-    width: 108px;
-    height: 108px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
   }
-  .depo-quote { font-size: 1.18rem; line-height: 1.62; color: var(--navy); margin: 0 0 20px; }
   .depo-nome { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; margin: 0; }
-  .depo-cargo { font-size: 0.88rem; color: var(--ink-3); margin: 2px 0 0; }
-  .depo-link { font-size: 0.86rem; margin: 26px 0 0; }
-  @media (max-width: 720px) {
-    .depo { flex-direction: column; gap: 20px; }
-    .depo img { width: 88px; height: 88px; }
-    .depo-quote { font-size: 1.06rem; }
+  .depo-cargo { font-size: 0.86rem; color: var(--ink-3); margin: 1px 0 0; }
+  .depo-link { font-size: 0.86rem; margin: 30px 0 0; }
+  @media (max-width: 860px) {
+    .depo-grade { grid-template-columns: 1fr; gap: 30px; }
   }
 
   .principios { margin: 0; padding-left: 1.3em; max-width: 720px; }
